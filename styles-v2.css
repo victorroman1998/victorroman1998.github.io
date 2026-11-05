@@ -703,3 +703,10 @@ html[data-theme=dark] .brand, html[data-theme=dark] .nav a, html[data-theme=dark
  .pub-list a, .cv-end { font-size:15px; }
  .tool-badge { font-size:15px; }
 }
+
+/* Give scientific figures enough width for their labels */
+.lepto-figures { grid-template-columns:1fr; max-width:1040px; margin-inline:auto; gap:25px; }
+.lepto-figure { grid-template-rows:auto auto; }
+.lepto-figure a { padding:18px; }
+.lepto-figure img { width:100%; height:auto; max-height:none; }
+@media (max-width:650px) { .lepto-figure a { padding:8px; } }
