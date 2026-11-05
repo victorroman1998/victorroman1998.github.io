@@ -592,3 +592,114 @@ html[data-theme=dark] .skills-section .skill-group p, html[data-theme=dark] .wor
 }
 
 @media (max-width: 650px) { .theme-toggle { display: grid; place-items: center; padding: 0; font-size: 0; } .theme-toggle [data-theme-text] { display: none; } .theme-toggle span:first-child { font-size: 21px; line-height: 1; } .nav a { font-size: 12.5px; } }
+
+/* November 2026 editorial typography and color scale */
+:root { --red:#c8102e; --accent:#c8102e; --accent-2:#c8102e; --ink:#202124; --ink-2:#4b4b4b; --line:#d7d2cd; }
+body, body * { font-family:'IBM Plex Mono','Courier New',monospace !important; }
+body { font-size:19px; line-height:1.62; }
+.site-header { background:rgba(255,255,255,.98); }
+.brand { font-size:16px; letter-spacing:0; }
+.nav a { font-size:14px; letter-spacing:0; }
+.theme-toggle, .language { font-size:14px; }
+.eyebrow, .section .eyebrow { font-size:16px !important; line-height:1.35; letter-spacing:.07em; }
+.section h2 { font-size:clamp(36px,3.45vw,48px); line-height:1.18; letter-spacing:-.03em; }
+.section h3 { font-size:clamp(22px,1.9vw,27px); line-height:1.25; letter-spacing:-.02em; }
+.section p, .section li { font-size:19px !important; line-height:1.64; }
+.section .lead { font-size:21px !important; line-height:1.58; }
+.button, .text-link { font-size:17px; line-height:1.35; }
+.hero h1 { font-size:clamp(50px,5.4vw,78px); line-height:1.09; letter-spacing:-.045em; }
+.hero-role { font-size:22px; line-height:1.47; }
+.hero .eyebrow { font-size:16px !important; }
+.profile-links a { font-size:16px; }
+.intro-portrait figcaption { font-size:16px; }
+.fact-list strong { font-size:19px; }
+.fact-list span { font-size:18px; line-height:1.58; }
+.skills-section .skill-group h3 { font-size:22px; }
+.skills-section .skill-group p { font-size:18px !important; }
+.finding-type { font-size:16px; }
+.finding-copy p { font-size:18px !important; }
+.finding-copy .text-link { font-size:17px; }
+.section .lepto-intro p { font-size:19px !important; }
+.section .source-note { font-size:16px !important; }
+.lepto-figures { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.lepto-figure figcaption span { font-size:15px; }
+.lepto-figure figcaption strong { font-size:20px; }
+.section .lepto-figure figcaption p { font-size:17px !important; }
+.section .process-lead { font-size:20px !important; }
+.work-checklist strong { font-size:19px; }
+.section .work-checklist p { font-size:18px !important; }
+.section .advising .lead { font-size:21px !important; }
+.advising-list strong { font-size:21px; line-height:1.4; }
+.advising-list span { font-size:19px; line-height:1.55; }
+.section .small-note { font-size:17px !important; }
+.section .contact-intro, .section .contact-options p { font-size:19px !important; }
+.contact-options a { font-size:17px; }
+.contact-number { font-size:16px; }
+.cox-kicker, .study-top { font-size:15px; }
+.section .cox-figure figcaption p { font-size:16px !important; }
+.forest-head { font-size:13px; }
+.forest-label, .forest-value { font-size:15px; }
+.forest-value small, .forest-axis > div { font-size:13px; }
+.section .cox-note, .cox-source, .study-foot { font-size:16px !important; }
+.study-controls button { font-size:15px; }
+.section .study-display p { font-size:17px !important; }
+.embedded-demo { height:530px; }
+.footer { font-size:15px; }
+.cv-title h1 { font-size:clamp(34px,4vw,52px); }
+.cv-title > p:not(.eyebrow), .cv-contact { font-size:17px; }
+.cv-section h2 { font-size:26px; }
+.cv-section > p { font-size:19px; line-height:1.65; }
+.cv-facts strong, .cv-facts span { font-size:18px; line-height:1.6; }
+.pub-list li { font-size:18px; line-height:1.6; }
+.pub-list a { font-size:17px; }
+.cv-end { font-size:16px; }
+.tool-badge { font-size:16px; }
+.cv-publication-head > div > p, .cv-publication-head > span { font-size:17px; }
+html[data-theme=dark] { --ink:#f3f3f2; --ink-2:#d6d7d7; }
+html[data-theme=dark] .site-header { background:rgba(20,29,34,.98); }
+html[data-theme=dark] .brand, html[data-theme=dark] .nav a, html[data-theme=dark] .theme-toggle, html[data-theme=dark] .language { color:#f4f4f3; }
+@media (max-width:1050px) {
+ .nav a { font-size:13px; }
+ .lepto-figures { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media (max-width:800px) {
+ .lepto-figures { grid-template-columns:1fr; }
+ .advising-list strong { font-size:19px; }
+ .advising-list span { font-size:18px; }
+}
+@media (max-width:650px) {
+ body { font-size:17px; }
+ .brand { font-size:14px; }
+ .nav a { font-size:13px; }
+ .section h2 { font-size:32px; }
+ .section h3 { font-size:22px; }
+ .section p, .section li { font-size:17px !important; }
+ .section .lead, .section .advising .lead { font-size:18px !important; }
+ .section .eyebrow { font-size:14px !important; }
+ .hero h1 { font-size:clamp(38px,10.3vw,48px); }
+ .hero-role { font-size:18px; }
+ .hero .eyebrow { font-size:14px !important; }
+ .button, .text-link { font-size:16px; }
+ .fact-list strong, .advising-list strong { font-size:18px; }
+ .fact-list span, .advising-list span { font-size:17px; }
+ .skills-section .skill-group p, .finding-copy p, .section .work-checklist p { font-size:17px !important; }
+ .section .source-note { font-size:15px !important; }
+ .section .lepto-figure figcaption p { font-size:16px !important; }
+ .section .small-note { font-size:16px !important; }
+ .section .process-lead { font-size:18px !important; }
+ .section .cox-figure figcaption p { font-size:15px !important; }
+ .forest-row { grid-template-columns:1fr; gap:7px; }
+ .forest-label { grid-column:1; grid-row:1; font-size:15px; }
+ .forest-value { grid-column:1; grid-row:2; text-align:left; white-space:normal; font-size:15px; }
+ .forest-value small { font-size:13px; }
+ .forest-track { grid-column:1; grid-row:3; }
+ .section .cox-note, .cox-source { font-size:15px !important; }
+ .embedded-demo { height:560px; }
+ .cv-title h1 { font-size:clamp(29px,8vw,35px); }
+ .cv-title > p:not(.eyebrow), .cv-contact { font-size:16px; }
+ .cv-section h2 { font-size:23px; }
+ .cv-section > p, .cv-facts strong, .cv-facts span { font-size:17px; }
+ .pub-list li { font-size:16px; }
+ .pub-list a, .cv-end { font-size:15px; }
+ .tool-badge { font-size:15px; }
+}
