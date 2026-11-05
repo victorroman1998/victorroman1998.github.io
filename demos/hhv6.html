@@ -3,7 +3,24 @@
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HHV-6: resultados interactivos</title>
 <style>
 :root{font-family:Arial,Helvetica,sans-serif;color:#172226;background:#f8f8f4}*{box-sizing:border-box}body{margin:0;padding:24px}.label{margin:0 0 6px;color:#a6534a;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}h1{margin:0 0 8px;font-size:clamp(22px,4vw,32px);line-height:1.15}p{line-height:1.5}.intro{margin:0 0 20px;color:#3d4b4d;font-size:14px}.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}.tabs button{min-height:44px;padding:10px 14px;border:1px solid #849494;background:#fff;color:#172226;font:700 13px Arial,sans-serif;cursor:pointer}.tabs button[aria-pressed=true]{background:#172226;color:#fff}.tabs button:focus-visible{outline:3px solid #b85e55;outline-offset:2px}.panel{min-height:160px;padding:22px;border:1px solid #c5cdca;background:#fff}.value{display:block;color:#b85e55;font-size:clamp(36px,7vw,54px);font-weight:700;line-height:1}.panel h2{margin:8px 0;font-size:18px}.detail{margin:0 0 18px;color:#3d4b4d;font-size:14px}.bar{height:23px;background:#dfe5e2}.bar span{display:block;height:100%;background:#327d80}.timeline{position:relative;height:28px;margin:25px 0;background:#dfe5e2}.timeline span{position:absolute;left:40%;width:43.333%;height:100%;background:#327d80}.axis{display:flex;justify-content:space-between;color:#42595b;font-size:11px}.note{margin:12px 0 0;color:#546262;font-size:12px}@media(max-width:500px){body{padding:17px}.panel{padding:16px}.intro,.detail{font-size:13px}}
-</style></head>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
+:root,body,body *{font-family:'IBM Plex Mono','Courier New',monospace!important}
+:root{color:#202124;background:#f4f2ed}
+body{padding:24px;font-size:18px;line-height:1.55}
+.label{color:#c8102e;font-size:16px}
+h1{font-size:clamp(27px,4vw,38px);line-height:1.2}
+.intro{font-size:18px;color:#4b4b4b;line-height:1.6}
+.tabs button{font-size:16px;min-height:46px;border-color:#b9b3ad;color:#202124}
+.tabs button[aria-pressed=true]{background:#202124;color:#fff}
+.tabs button:focus-visible{outline-color:#c8102e}
+.panel{border-color:#d7d2cd}
+.value{color:#c8102e;font-size:clamp(37px,7vw,54px)}
+.panel h2{font-size:22px}
+.detail{font-size:17px;color:#4b4b4b}
+.bar,.timeline{background:#e8e4e0}
+.bar span,.timeline span{background:#c8102e}
+.axis,.note{font-size:15px;color:#555}
+@media(max-width:500px){body{padding:18px;font-size:16px}.intro,.detail{font-size:16px}.panel{padding:18px}.tabs button{font-size:15px}.label{font-size:14px}.axis,.note{font-size:14px}}</style></head>
 <body>
 <p class="label" id="kicker">Demostración integrada</p><h1 id="heading">HHV-6 tras trasplante pediátrico</h1><p class="intro" id="intro">Explora tres cifras de la cohorte publicada. Los datos son agregados y no incluyen registros individuales.</p>
 <div class="tabs" aria-label="Indicadores del estudio"><button type="button" data-index="0" aria-pressed="true">Pacientes</button><button type="button" data-index="1" aria-pressed="false">Detección</button><button type="button" data-index="2" aria-pressed="false">Periodo</button></div>
