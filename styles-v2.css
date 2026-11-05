@@ -573,3 +573,20 @@ html[data-theme=dark] .skills-section .skill-group p, html[data-theme=dark] .wor
   .cv-facts li { grid-template-columns: 1fr; gap: 5px; }
   .cv-title h1 { font-size: 34px; }
 }
+
+/* Compact, fully visible navigation on narrow screens */
+.hero-cover { min-height: min(720px, calc(100svh - 72px)); }
+.hero-cover-inner { justify-content: center; padding-block: 60px; }
+@media (max-width: 650px) {
+  .header-inner { display: grid; grid-template-columns: minmax(0,1fr) 40px 43px; column-gap: 7px; row-gap: 8px; padding-block: 9px; }
+  .brand { grid-column: 1; grid-row: 1; min-width: 0; margin: 0; font-size: 15px; }
+  .nav-wrap { display: contents; }
+  .theme-toggle { grid-column: 2; grid-row: 1; width: 40px; min-width: 40px; height: 40px; margin: 0; }
+  .language { grid-column: 3; grid-row: 1; width: 43px; min-width: 43px; height: 40px; margin: 0; padding: 0; font-size: 13px; }
+  .nav { grid-column: 1 / -1; grid-row: 2; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 5px; width: 100%; overflow: visible; padding: 0; }
+  .nav a { display: grid; place-items: center; min-height: 37px; padding: 4px; border: 1px solid #d5d2ce; font-size: 12px; font-weight: 700; line-height: 1.18; text-align: center; white-space: normal; }
+  .hero-cover { min-height: 570px; background-image: linear-gradient(90deg,rgba(8,17,28,.88) 0%,rgba(8,17,28,.58) 55%,rgba(8,17,28,.18) 100%), url('assets/hero-peru-datos.jpg'); background-position: center, 68% center; }
+  .hero-cover-inner { justify-content: center; padding-block: 54px; }
+  .hero h1 { font-size: clamp(42px,11vw,61px); }
+  .hero-role { font-size: 19px; }
+}
