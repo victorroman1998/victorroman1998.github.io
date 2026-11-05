@@ -18,7 +18,7 @@
 
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (!reducedMotion && 'IntersectionObserver' in window) {
-    const targets = document.querySelectorAll('.hero-grid > div:first-child, .portrait, .section-head, .area-label, .work-card, .advising-grid > div, .profile-grid > div, .demo-intro > div, .demo-intro > p, .cox-figure, .cox-layout > .study-panel, .contact-options > article');
+    const targets = document.querySelectorAll('.intro-grid > *, .results-head, .result-slide, .lepto-intro, .lepto-figure, .section-head, .area-label, .work-card, .advising-grid > div, .profile-grid > div, .demo-intro > div, .demo-intro > p, .cox-figure, .cox-layout > .study-panel, .contact-options > article');
     targets.forEach(el => el.setAttribute('data-reveal', ''));
     document.documentElement.classList.add('motion-ready');
     const observer = new IntersectionObserver(entries => {
@@ -70,4 +70,58 @@
       }
     });
   });
+})();
+
+(() => {
+  const toggle = document.querySelector('[data-theme-toggle]');
+  const label = toggle?.querySelector('[data-theme-text]');
+  const english = document.documentElement.lang === 'en';
+  const setLabel = () => {
+    if (label) label.textContent = document.documentElement.dataset.theme === 'dark'
+      ? (english ? 'Light' : 'Claro') : (english ? 'Dark' : 'Oscuro');
+  };
+  setLabel();
+  toggle?.addEventListener('click', () => {
+    const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    document.documentElement.dataset.theme = next;
+    try { localStorage.setItem('site-theme', next); } catch {}
+    setLabel();
+  });
+
+  const track = document.querySelector('[data-result-track]');
+  if (!track) return;
+  const slides = [...track.querySelectorAll('.result-slide')];
+  const count = document.querySelector('[data-carousel-count]');
+  const prev = document.querySelector('[data-carousel-prev]');
+  const next = document.querySelector('[data-carousel-next]');
+  let active = 0;
+  const show = index => {
+    active = Math.max(0, Math.min(slides.length - 1, index));
+    const left = slides[active].getBoundingClientRect().left - track.getBoundingClientRect().left + track.scrollLeft;
+    track.scrollTo({ left, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+    update();
+  };
+  const update = () => {
+    const center = track.getBoundingClientRect().left + track.clientWidth / 2;
+    let best = Infinity;
+    slides.forEach((slide, index) => {
+      const rect = slide.getBoundingClientRect();
+      const distance = Math.abs(rect.left + rect.width / 2 - center);
+      if (distance < best) { best = distance; active = index; }
+    });
+    count.textContent = `${String(active + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`;
+    prev.disabled = active === 0;
+    next.disabled = active === slides.length - 1;
+  };
+  prev?.addEventListener('click', () => show(active - 1));
+  next?.addEventListener('click', () => show(active + 1));
+  track.addEventListener('scroll', () => requestAnimationFrame(update), { passive: true });
+  track.addEventListener('keydown', event => {
+    if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+      event.preventDefault();
+      show(active + (event.key === 'ArrowRight' ? 1 : -1));
+    }
+  });
+  window.addEventListener('resize', update);
+  update();
 })();
