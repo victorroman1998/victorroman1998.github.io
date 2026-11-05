@@ -590,3 +590,5 @@ html[data-theme=dark] .skills-section .skill-group p, html[data-theme=dark] .wor
   .hero h1 { font-size: clamp(42px,11vw,61px); }
   .hero-role { font-size: 19px; }
 }
+
+@media (max-width: 650px) { .theme-toggle { display: grid; place-items: center; padding: 0; font-size: 0; } .theme-toggle [data-theme-text] { display: none; } .theme-toggle span:first-child { font-size: 21px; line-height: 1; } .nav a { font-size: 12.5px; } }
