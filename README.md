@@ -15,7 +15,7 @@
 - `assets/CV_publico_Victor_Roman_Lazarte.pdf`: copia imprimible en PDF disponible como opción secundaria al final del CV en línea.
 - `assets/`: retrato, portada de Perú y datos, íconos temáticos y figuras originales del proyecto de leptospirosis en ambos idiomas.
 
-La portada presenta el perfil y la formación, las habilidades, tres publicaciones principales documentadas, la investigación sobre leptospirosis, una demostración incrustada, la forma de trabajo y la asesoría estudiantil. La sección de leptospirosis contiene cuatro figuras originales. El proyecto se presenta como análisis de un manuscrito en revisión editorial y no se cuenta entre los artículos publicados. La cifra de **36 publicaciones** corresponde a las referencias enumeradas en el CV académico facilitado en noviembre de 2026. La sección de HHV-6 incluye un forest plot de los tres modelos de Cox univariables publicados.
+La portada presenta el perfil y la formación, las habilidades, tres publicaciones principales documentadas, la investigación sobre leptospirosis, una demostración incrustada, la forma de trabajo y la asesoría estudiantil. La sección de leptospirosis muestra tres figuras originales de la serie semanal y del desempeño predictivo; se omitió el mapa compuesto para evitar una comparación visual de escalas distintas. El proyecto se presenta como análisis de un manuscrito en revisión editorial y no se cuenta entre los artículos publicados. La cifra de **36 publicaciones** corresponde a las referencias enumeradas en el CV académico facilitado en noviembre de 2026. La sección de HHV-6 incluye un forest plot de los tres modelos de Cox univariables publicados.
 
 ## Revisión local
 
